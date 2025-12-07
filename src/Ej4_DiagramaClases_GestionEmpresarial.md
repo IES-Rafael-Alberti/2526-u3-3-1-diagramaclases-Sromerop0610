@@ -191,9 +191,7 @@ open class Persona(
     private var nombreCompleto: String,
     private var fechaNacimiento: LocalDate
 ) {
-    fun calcularEdad(): Int {
-        return Period.between(fechaNacimiento, LocalDate.now()).years
-    }
+    fun calcularEdad(): 
 }
 
 open class Empleado(
@@ -202,8 +200,7 @@ open class Empleado(
     private var sueldoBruto: Double
 ) : Persona(nombreCompleto, fechaNacimiento) {
 
-    open fun calcularSueldoNeto(): Double {
-        return sueldoBruto * 0.78 // Retención estándar 22%
+    open fun calcularSueldoNeto():
     }
 }
 
@@ -216,13 +213,9 @@ class EmpleadoResponsable(
 
     private val subordinados = mutableListOf<Empleado>()
 
-    fun agregarSubordinado(sub: Empleado) {
-        subordinados.add(sub)
-    }
+    fun agregarSubordinado(sub: Empleado) 
 
-    fun getSubordinados(): List<Empleado> {
-        return subordinados
-    }
+    fun getSubordinados():
 }
 
 class Cliente(
@@ -238,13 +231,9 @@ class Empresa(
 ) {
     private val clientes = mutableListOf<Cliente>()
 
-    fun agregarCliente(cliente: Cliente) {
-        clientes.add(cliente)
-    }
+    fun agregarCliente(cliente: Cliente)
 
-    fun getClientes(): List<Cliente> {
-        return clientes
-    }
+    fun getClientes():
 }
 
 enum class CategoriaEmpleado {
